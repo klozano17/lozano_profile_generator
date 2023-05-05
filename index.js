@@ -71,64 +71,6 @@ const promptManager = () => {
     })
 }
 
-const promptTeam = () => {
-    return inquirer.prompt([
-        {
-            type: 'list',
-            name: 'team',
-            message: 'What type of team member would you like to add?',
-            choices: ['Engineer', 'Intern', 'I don\'t want to add any more team members']
-        }
-        {
-            type: 'input',
-            name: 'name',
-            message: 'What is the team member\'s name?',
-            validate: nameInput => {
-                if (nameInput) {
-                    return true;
-                } else {
-                    console.log('Please enter the team member\'s name!');
-                    return false;
-                }
-            }
-        },
-        {
-            type: 'input',
-            name: 'id',
-            message: 'What is the team member\'s employee ID?',
-            validate: idInput => {
-                if (idInput) {
-                    return true;
-                } else {
-                    console.log('Please enter the team member\'s employee ID!');
-                    return false;
-                }
-            }
-        },
-        {
-            type: 'input',
-            name: 'email',
-            message: 'What is the team member\'s email address?',
-            validate: emailInput => {
-                if (emailInput) {
-                    return true;
-                } else {
-                    console.log('Please enter the team member\'s email address!');
-                    return false;
-                }
-            }
-        },
-    ])
-    .then(teamData => {
-        if (teamData.team === 'Engineer') {
-            return promptEngineer();
-        } else if (teamData.team === 'Intern') {
-            return promptIntern();
-        } else {
-            return teamMembers;
-        }
-    })
-}
 
 const promptEngineer = () => {
     return inquirer.prompt([

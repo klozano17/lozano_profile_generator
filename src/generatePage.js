@@ -123,5 +123,4 @@ const generateTeamPage = function (employeeCards){
 </html>
 `;
 }
-
-export default generatePage;
+module.exports = generateTeamPage;
