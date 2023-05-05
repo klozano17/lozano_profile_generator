@@ -19,6 +19,8 @@ To install, you will clone the repo, install inquirer if needed by typing "npm i
 
 Run the app by typing "node index.js".
 
+Link to the video demo :https://drive.google.com/file/d/1IR16NOL_QyS2uVderz1S8a4EbLhGKLW1/view
+
 # License
 
 MIT License
