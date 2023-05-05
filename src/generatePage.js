@@ -55,7 +55,7 @@ const generateIntern = (intern) => {
     `;
 }
 
-generatePage = (data) => {
+generateHTML = (data) => {
     cardArray = []; 
 
     for (let i = 0; i < data.length; i++) {
@@ -85,7 +85,7 @@ generatePage = (data) => {
 
     const employeeCards = cardArray.join('')
 
-    const generateTeam = generateTeamPage(employeeCards); 
+    const generateTeam = generateTeamPage (employeeCards); 
     return generateTeam;
 
 }
@@ -105,20 +105,19 @@ const generateTeamPage = function (employeeCards){
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 p-5 mb-3 team-heading">
-                <h1 class="text-center">My Team Profile</h1>
-            </div>
-        </div>
-    </div>
+<body>
+<header>
+    <nav class="navbar" id="navbar">
+        <span class="navbar-title mb-0 h1 w-100 text-center" id="navbar-text">My Team Profile</span>
+    </nav>
+</header>
+<main>
     <div class="container">
-        <div class="row">
-            <div class="team-area col-12 d-flex justify-content-center">
-                ${generateTeam(team)}
-            </div>
+        <div class="row justify-content-center" id="team-cards">
+            ${employeeCards}
         </div>
     </div>
+</main>
 </body>
 </html>
 `;
